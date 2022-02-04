@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <label for="length">Length of rectangle :</label>
+        <input type="number" name="" id="length" />
+      </div>
+
+      <div class="section">
+        <label for="width">width of rectangle :</label>
+        <input type="number" name="" id="width" />
+      </div>
+
+      <button type="button" onclick="myfunc()">Area/perimeter</button>
+      <div><p id="visible">Area of the rectangle = <span id="area"></span></p>
+      <p id="visible">perimeter of the rectangle = <span id="peri"></span></p></div>
+      
+      
+    </div>
+    <script>
+      function myfunc() {
+      
+        let len = document.getElementById('length').value ;
+        let wid = document.getElementById('width').value ;
+        if(len == "" || wid == ""){
+            alert("please fill the box");
+        }
+        let area = len * wid ;
+        perimeter = 2 * (parseInt(len) + parseInt(wid)) ;
+        document.getElementById('area').innerHTML = area ;
+        document.getElementById('peri').innerHTML = perimeter ;
+        // dis = document.getElementById('visible') ;
+        // if (dis.style.display == 'none') {
+        //   dis.style.display = 'block' ;
+        // } else{
+        //   dis.style.display = 'none' ;
+        // }
+      }
+    </script>
+  </body>
+</html>
